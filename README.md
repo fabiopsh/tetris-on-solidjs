@@ -1,36 +1,56 @@
-## Usage
+# 🧱 Tetris on SolidJS
 
-Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
+![SolidJS](https://img.shields.io/badge/SolidJS-2c4f7c?style=for-the-badge&logo=solid&logoColor=c8c9cb)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
 
-This is the reason you see a `pnpm-lock.yaml`. That being said, any package manager will work. This file can be safely be removed once you clone a template.
+**A fully functional Tetris clone built from scratch in under 60 minutes.**
+
+This project was created as a preparatory exercise for the **Advanced Programming** exam at the **University of Pisa** (MSc in Computer Science / ICT Solution Architect), taught by **Prof. Antonio Cisternino**.
+
+The goal was not to create a polished product, but to challenge the capabilities of **SolidJS's fine-grained reactivity** and to test rapid prototyping skills under time constraints.
+
+---
+
+## ⚡ The Challenge: "1-Hour Sprint"
+
+-  **Constraint:** ~1 Hour of coding time.
+-  **Goal:** Implement core mechanics (Grid, Tetrominos, Gravity, Collision, Line Clearing).
+-  **Stack:** SolidJS + TypeScript.
+
+### Why SolidJS?
+
+Unlike React, SolidJS does not use a Virtual DOM. Instead, it compiles its templates to real DOM nodes and updates them with fine-grained reactions. For a game loop like Tetris, this ensures high performance and direct state management without unnecessary re-renders.
+
+## 🎮 Features Implemented
+
+Despite the short timeframe, the core mechanics are operational:
+
+-  ✅ **Game Loop:** Managed via `requestAnimationFrame` or `setInterval` for gravity.
+-  ✅ **Collision Detection:** Wall kicks and floor collision logic.
+-  ✅ **State Management:** Using SolidJS `Signals` and `Stores` for the grid and active piece.
+-  ✅ **Rendering:** Reactive rendering of the 10x20 grid.
+
+## 🚀 How to Run
+
+This project uses [Vite](https://vitejs.dev/) for a lightning-fast development server.
+
+### 1. Clone & Install
 
 ```bash
-$ npm install # or pnpm install or yarn install
+git clone [https://github.com/fabiopsh/tetris-on-solidjs.git](https://github.com/fabiopsh/tetris-on-solidjs.git)
+cd tetris-on-solidjs
+npm install
 ```
 
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
+### 2. Run the Project
 
-## Available Scripts
+```bash
+npm run dev
+```
 
-In the project directory, you can run:
+### 3. Build the Project
 
-### `npm run dev` or `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-
-### `npm run build`
-
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-## Deployment
-
-You can deploy the `dist` folder to any static host provider (netlify, surge, now, etc.)
-
-## This project was created with the [Solid CLI](https://github.com/solidjs-community/solid-cli)
+```bash
+npm run build
+```
